@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1537125667 source:d:\utn\primer cuatrimestre\programacion i\sistemaalumnos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1537125041 source:d:\utn\primer cuatrimestre\programacion i\sistemaalumnos\funciones.h
+
+1537125092 source:d:\utn\primer cuatrimestre\programacion i\sistemaalumnos\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1537125041 d:\utn\primer cuatrimestre\programacion i\sistemaalumnos\funciones.h
+
