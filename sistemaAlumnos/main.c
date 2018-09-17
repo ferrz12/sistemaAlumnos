@@ -24,6 +24,8 @@ int main()
      switch(opcion){
 
          case 1:
+            ordenarAlfabeticamente(legajos, nombres, notas, alturas, T);
+            break;
          case 2:
          case 3:
          case 4:

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
+#include <string.h>
 
 void cargarAlumnos(int legajos[], char nombres[][21], int notas[], float alturas[], int cantidadDeElementos)
 {
@@ -21,7 +22,7 @@ void cargarAlumnos(int legajos[], char nombres[][21], int notas[], float alturas
      }
 }
 
-mostrarAlumnos(int legajos[], char nombres[][21], int notas[], float alturas[], int cantidadDeElementos)
+void mostrarAlumnos(int legajos[], char nombres[][21], int notas[], float alturas[], int cantidadDeElementos)
 {
      int i;
      printf("%4s %20s %4s %5s\n", "Legajo", "Nombre", "Nota", "Altura ");
@@ -47,6 +48,49 @@ int pedirEntero(char texto[]){
     scanf("%d", &numero);
 
     return numero;
+
+}
+
+void ordenarAlfabeticamente(int legajos[], char nombres[][21], int notas[], float alturas[], int cantidadDeElementos)
+{
+    int i;
+    int j;
+    char aux[21];
+    int legajoAux;
+    int notaAux;
+    int alturaAux;
+
+    for(i = 0; i < cantidadDeElementos - 1; i++)
+    {
+        for(j = i + 1; j < cantidadDeElementos; j++)
+        {
+            if(nombres[j][0] < nombres [i][0])
+            {
+                legajoAux = legajos[j];
+                legajos[j] = legajos[i];
+                legajos[i] = legajoAux;
+
+                strcpy(aux, nombres[j]);
+                strcpy(nombres[j], nombres[i]);
+                strcpy(nombres[i], aux);
+
+                notaAux = notas[j];
+                notas[j] = notas[i];
+                notas[i]= notaAux;
+
+                alturaAux = alturas[j];
+                alturas[j] = alturas[i];
+                alturas[i]= alturaAux;
+            }
+        }
+
+    }
+
+     printf("%4s %20s %4s %5s\n", "Legajo", "Nombre", "Nota", "Altura ");
+     for(i = 0; i < cantidadDeElementos ; i++)
+     {
+        printf("%4d %20s %4d %5f \n", legajos[i], nombres[i], notas[i], alturas[i]);
+     }
 
 }
 
