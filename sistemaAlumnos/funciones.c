@@ -55,32 +55,31 @@ void ordenarAlfabeticamente(int legajos[], char nombres[][21], int notas[], floa
 {
     int i;
     int j;
-    char aux[21];
-    int legajoAux;
-    int notaAux;
-    int alturaAux;
+    char auxString[100]; //va a ordenar un solo nombre a la vez
+    int auxInt;
+    float auxFloat;
 
     for(i = 0; i < cantidadDeElementos - 1; i++)
     {
-        for(j = i + 1; j < cantidadDeElementos; j++)
-        {
-            if(nombres[j][0] < nombres [i][0])
-            {
-                legajoAux = legajos[j];
+        for(j = i + 1; j < cantidadDeElementos; j++){
+            if(strcmp(nombres[i], nombres[j]) > 0){
+
+                strcpy(auxString, nombres[i]);
+                strcpy(nombres[i], nombres[j]);
+                strcpy(nombres[j], auxString);
+
+                auxInt = legajos[i];
                 legajos[j] = legajos[i];
-                legajos[i] = legajoAux;
+                legajos[j] = auxInt;
 
-                strcpy(aux, nombres[j]);
-                strcpy(nombres[j], nombres[i]);
-                strcpy(nombres[i], aux);
-
-                notaAux = notas[j];
+                auxInt = notas[i];
                 notas[j] = notas[i];
-                notas[i]= notaAux;
+                notas[j] = auxInt;
 
-                alturaAux = alturas[j];
+                auxFloat = alturas[i];
                 alturas[j] = alturas[i];
-                alturas[i]= alturaAux;
+                alturas[j] = auxFloat;
+
             }
         }
     }
@@ -101,12 +100,12 @@ void alumnoNombreConP(int legajos[], char nombres[][21], int notas[], float altu
     for(i = 0; i < cantidadDeElementos; i++){
         if(nombres[i][0] == 'p')
         {
+            printf("%4s %20s %4s %5s\n", "Legajo", "Nombre", "Nota", "Altura");
             printf("%4d %20s %4d %5f \n", legajos[i], nombres[i], notas[i], alturas[i]);
-
-        }else{
-                printf("No se encontro ningun alumno cuyo nombre empiece con p \n");
-            }
+        }
     }
+
+
 
     system("pause");
 

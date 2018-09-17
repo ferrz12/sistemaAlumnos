@@ -28,3 +28,18 @@
 	"funciones.h"
 	<string.h>
 
+1537195676 source:d:\clase17-9-18\sistemaalumnos\sistemaalumnos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1537195676 d:\clase17-9-18\sistemaalumnos\sistemaalumnos\funciones.h
+
+1537195676 source:d:\clase17-9-18\sistemaalumnos\sistemaalumnos\funciones.h
+
+1537198275 source:d:\clase17-9-18\sistemaalumnos\sistemaalumnos\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<string.h>
+
