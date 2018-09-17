@@ -83,14 +83,32 @@ void ordenarAlfabeticamente(int legajos[], char nombres[][21], int notas[], floa
                 alturas[i]= alturaAux;
             }
         }
-
     }
 
-     printf("%4s %20s %4s %5s\n", "Legajo", "Nombre", "Nota", "Altura ");
-     for(i = 0; i < cantidadDeElementos ; i++)
+     printf("%4s %20s %4s %5s\n", "Legajo", "Nombre", "Nota", "Altura");
+     for(i = 0; i < cantidadDeElementos; i++)
      {
         printf("%4d %20s %4d %5f \n", legajos[i], nombres[i], notas[i], alturas[i]);
      }
+
+     system("pause");
+
+}
+
+void alumnoNombreConP(int legajos[], char nombres[][21], int notas[], float alturas[], int cantidadDeElementos)
+{
+    int i;
+    for(i = 0; i < cantidadDeElementos; i++){
+        if(nombres[i][0] == 'p')
+        {
+            printf("%4d %20s %4d %5f \n", legajos[i], nombres[i], notas[i], alturas[i]);
+
+        }else{
+                printf("No se encontro ningun alumno cuyo nombre empiece con p \n");
+            }
+    }
+
+    system("pause");
 
 }
 

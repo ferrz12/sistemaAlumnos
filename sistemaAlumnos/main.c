@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "funciones.h"
 #define T 2
+
 int main()
 {
      int legajos[T];
@@ -27,11 +28,15 @@ int main()
             ordenarAlfabeticamente(legajos, nombres, notas, alturas, T);
             break;
          case 2:
+            alumnoNombreConP(legajos, nombres, notas, alturas, T);
+            break;
          case 3:
          case 4:
          case 5:
              opcion = 5;
              break;
+         default:
+            printf("Ingrese opcion valida");
      }
 
      system("cls"); //limpia pantalla
