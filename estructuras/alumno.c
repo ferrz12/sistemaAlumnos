@@ -73,4 +73,13 @@ void ordenarPorNombre(eAlumno listado[], int tam)
 
 }
 
+void alumnoNombreConP(eAlumno [], int tam){
+    int i;
+    for(i = 0; i < tam; i++){
+        if(listado[0].nombre == 'p'){
+            mostrarListadoDeAlumnos(listado, tam);
+        }
+    }
+}
+
 
